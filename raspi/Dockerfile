@@ -11,8 +11,7 @@ RUN apt-get install -y vim mc sudo git
 RUN apt-get install -y vim mc sudo git openssh-server
 RUN mkdir /var/run/sshd
 
-# Mac OS X color shell support
-#ADD bashrc /etc/skel/.bashrc
+ADD bashrc /etc/skel/.bashrc
 
 RUN useradd -m -G sudo -s /bin/bash -U venik
 RUN echo 'venik:venik' | chpasswd
