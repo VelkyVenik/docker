@@ -6,8 +6,6 @@ FROM     resin/rpi-raspbian:wheezy
 MAINTAINER venik "venik@venik.org"
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y vim mc sudo git
-
 RUN apt-get install -y vim mc sudo git openssh-server
 RUN mkdir /var/run/sshd
 
